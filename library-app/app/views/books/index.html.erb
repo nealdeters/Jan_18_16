@@ -1,0 +1,10 @@
+<table class="book-table">
+<h2>Book List</h2>
+<% @books.each do |book| %>
+  <tr>
+    <td><h3>Name: </h3></td>
+    <td><h4><%= link_to book.title, "/books/#{book.id}" %></h4></td>
+  </tr>
+<% end %>
+
+</table>

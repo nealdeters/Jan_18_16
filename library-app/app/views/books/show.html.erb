@@ -1,0 +1,8 @@
+<h4>Title: </h4><p><%= @book.title %></p>
+<h4>Author: </h4><p><%= @book.author %></p>
+<h4>Year Published: </h4><p><%= @book.year_published %></p>
+<h4>Total Pages: </h4><p><%= @book.total_pages %></p>
+
+<%= link_to "Home", "/", class: "btn btn-default" %>
+<%= link_to "Edit", "/books/#{@book.id}/edit", class: "btn btn-default" %>
+<%= link_to "Delete", "/books/#{@book.id}", method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure?"}  %>

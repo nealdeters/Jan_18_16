@@ -1,0 +1,35 @@
+<h2>Update book</h2>
+
+<%= form_tag "/books/#{@book.id}", method: :patch do %>
+  <h4>
+    <%= label_tag :title %>
+  </h4>
+  <p>
+    <%= text_field_tag :title, @book.title %>
+  </p>
+  
+
+  <h4>
+    <%= label_tag :author %>
+  </h4>
+  <p>
+    <%= text_field_tag :author, @book.author %>
+  </p>
+
+  <h4>
+    <%= label_tag :year_published %>
+  </h4>
+  <p>
+    <%= text_field_tag :year_published, @book.year_published %>
+  </p>
+
+  <h4>
+    <%= label_tag :total_pages %>
+  </h4>
+  <p>
+    <%= text_field_tag :total_pages, @book.total_pages %>
+  </p>
+
+  <%= submit_tag "Update Book", class: "btn btn-default"%>
+
+<% end %>
